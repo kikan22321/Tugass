@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <label for="text">X</label>
+        <input type="number" id="X">
+        <label for="Text">Y</label>
+        <input type="number" id="Y">
+        <button onclick="cekhuruf()">Cek</button>
+    </form>
+    <div id="hasil"></div>
+    <script>
+        function cekhuruf() {
+            let X = parseInt(document.getElementById ('X').value)
+            let Y = parseInt(document.getElementById ('Y').value)
+            let p = X + Y
+            document.getElementById('hasil').innerHTML ="p=" + p
+            if (p=>0)
+                if (p >=0) {
+                    var q = X * Y
+                } else {
+                    var q = X / Y
+                }
+                document.getElementById('hasil').innerHTML = "q =" + q
+            }
+            
+    </script>
+    
+</body>
+</html>

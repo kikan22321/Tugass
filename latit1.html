@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="return false">
+      <label for="nama">Nama Siswa</label>
+      <input type="text" id="nama_siswa" /><br><br>
+      <label for="nilai">Masukan Nilai</label>
+      <input type="number" id="nilai" />
+      <button onclick="cek_nilai()">Cek Nilai</button>
+    </form>
+    <div id="nama"></div>
+    <div id="hasil"></div>
+    <script>
+      function cek_nilai() {
+        let nama = document.getElementById('nama_siswa').value
+        document.getElementById('nama').innerHTML = nama
+        let nilai = document.getElementById('nilai').value
+        document.getElementById('hasil').innerHTML = nilai
+        if (nilai > 90) {
+          document.getElementById('hasil').innerHTML = "Anda Lulus A"
+        } else if (nilai > 80) {
+          document.getElementById('hasil').innerHTML = "Zahir poke"
+        } else if (nilai > 70) {
+          document.getElementById('hasil').innerHTML = "anda poke"
+        } else if (nilai > 60) {
+          document.getElementById('hasil').innerHTML = "Anda Lulus D"
+        } else {
+          document.getElementById('hasil').innerHTML = "Anda Lulus E"
+        }
+      }
+    </script>
+  </body>
+</html>
